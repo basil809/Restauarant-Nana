@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { FiSearch } from 'react-icons/fi'
+import hero1 from '../assets/images/hero-1.jpeg'
+import hero2 from '../assets/images/hero-2.jpeg'
+import hero3 from '../assets/images/hero-3.jpeg'
+import hero4 from '../assets/images/hero-4.jpeg'
+import hero5 from '../assets/images/hero-5.jpeg'
 
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -170,6 +175,8 @@ const Menu = () => {
 }
 
 function getFallbackMenuData() {
+  const images = [hero1, hero2, hero3, hero4, hero5]
+  
   return [
     {
       _id: '1',
@@ -178,7 +185,7 @@ function getFallbackMenuData() {
       description: 'Grilled octopus with coconut, lime and Swahili spices',
       price: 1800,
       currency: 'KES',
-      image: 'https://via.placeholder.com/300x200?text=Pweza+wa+Samaki',
+      image: images[0],
       isVegetarian: false,
       isSpicy: true,
     },
@@ -189,7 +196,7 @@ function getFallbackMenuData() {
       description: 'Fragrant basmati rice with tender chicken and aromatic spices',
       price: 1200,
       currency: 'KES',
-      image: 'https://via.placeholder.com/300x200?text=Biryani+ya+Kuku',
+      image: images[1],
       isVegetarian: false,
       isSpicy: false,
     },
@@ -200,7 +207,7 @@ function getFallbackMenuData() {
       description: 'Fish fillet in creamy coconut sauce',
       price: 1700,
       currency: 'KES',
-      image: 'https://via.placeholder.com/300x200?text=Samaki+wa+Kupaka',
+      image: images[2],
       isVegetarian: false,
       isSpicy: false,
     },
